@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Zenith Arts and Sports Club</title>
+    <link rel="stylesheet" href="{% static 'club/home.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+
+        /* Body Layout */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0099cc, #4CAF50); /* Gradient background */
+            color: #333;
+            height: 100vh;
+        }
+
+        /* Centered Content */
+        .login-container {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        /* Form Elements */
+        .form-container input {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 12px 15px;
+            width: 100%;
+            margin: 12px 0;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-container input:focus {
+            border-color: #0099cc;
+            outline: none;
+        }
+
+        /* Button Styling */
+        .form-container button {
+            background-color: #0099cc;
+            color: white;
+            border: none;
+            padding: 12px 15px;
+            width: 100%;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-container button:hover {
+            background-color: #0077b3;
+        }
+
+        footer {
+            background-color: #0099cc;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            font-size: 1rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 480px) {
+            .login-container {
+                padding: 20px;
+                width: 90%;
+            }
+
+            .login-container h2 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login to Zenith Arts and Sports Club</h2>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-container">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username:</label>
+                    <input type="text" id="username" name="username" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password:</label>
+                    <input type="password" id="password" name="password" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Login</button>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Zenith Arts and Sports Club. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,44 @@
+.home_text{
+    justify-content: end;
+}
+.one{
+    padding-left: 40px;
+}
+
+
+.bg-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.header-class {
+    position: absolute;
+    top: 50%; 
+    left: 10%;
+    color: white; 
+}
+.colour{
+    background-color: rgb(73, 192, 228);
+}
+.bg-img {
+    position: relative; /* Needed for positioning text over the image */
+    text-align: center; /* Center-align text if desired */
+}
+
+.bg-img img {
+    width: 100%; /* Ensure the image is responsive */
+    height: auto;
+}
+
+.header-class {
+    position: absolute; /* Position the text over the image */
+    top: 50%; /* Adjust as needed */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the text */
+    color: white; /* Contrast text color */
+    background: rgba(0, 0, 0, 0.5); /* Optional: Add semi-transparent background for better readability */
+    padding: 20px;
+    border-radius: 10px; /* Optional: Rounded corners for the text box */
+    width: 80%; /* Adjust as needed for responsive design */
+}

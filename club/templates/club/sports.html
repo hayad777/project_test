@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenith Arts and Sports Club - Sports</title>
+    <link rel="stylesheet" href="{% static 'club/home.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #0099cc;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            width: 250px;
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h2 {
+            font-size: 1.4rem;
+            color: #0099cc;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .back-button {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .back-button a {
+            text-decoration: none;
+            background-color: #0099cc;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        footer {
+            background-color: #0099cc;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sports Activities</h1>
+    </header>
+
+    <div class="container">
+        <h2>Our Sports Programs</h2>
+        <p>Zenith Arts and Sports Club offers a variety of sports to bring the community together and promote an active lifestyle.</p>
+
+        <div class="grid">
+            <div class="card">
+                <h2><i class="fas fa-futbol"></i> Football</h2>
+                <p>Participate in exciting football leagues and practice sessions.</p>
+            </div>
+            <div class="card">
+                <h2><i class="fas fa-cricket"></i> Cricket</h2>
+                <p>Join our cricket tournaments and friendly matches.</p>
+            </div>
+            <div class="card">
+                <h2><i class="fas fa-running"></i> Kabaddi</h2>
+                <p>Experience the thrill of kabaddi with competitive events.</p>
+            </div>
+            <div class="card">
+                <h2><i class="fas fa-basketball-ball"></i> Basketball</h2>
+                <p>Improve your skills in our basketball training sessions.</p>
+            </div>
+            <div class="card">
+                <h2><i class="fas fa-shuttlecock"></i> Badminton</h2>
+                <p>Enjoy friendly matches and coaching for all skill levels.</p>
+            </div>
+            <div class="card">
+                <h2><i class="fas fa-table-tennis"></i> Table Tennis</h2>
+                <p>Sharpen your reflexes with our table tennis activities.</p>
+            </div>
+            <div class="card">
+                <h2><i class="fas fa-volleyball-ball"></i> Volleyball</h2>
+                <p>Join our volleyball practice sessions and tournaments.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="back-button">
+        <a href="{% url 'home' %}">Back to Home</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Zenith Arts and Sports Club. All rights reserved.</p>
+    </footer>
+</body>
+</html>
